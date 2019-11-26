@@ -59,7 +59,7 @@ public class FizzBuzzSolution {
        } else if(number % 3 == 0 || checkHasThree(number) == true ) {
          return "fizz";
        } else if(number % 5 == 0 || checkHasFive(number) == true) {
-         return "buzz"
+         return "buzz";
        }
 
        return number.toString();
@@ -67,6 +67,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
