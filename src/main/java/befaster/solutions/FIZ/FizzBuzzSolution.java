@@ -44,22 +44,33 @@ public class FizzBuzzSolution {
     return true;
   }
 
+  public String deluxeType(Integer number) {
+    if(checkDeluxe(number) == true) {
+      if(number % 2 != 0) {
+        return "fake deluxe";
+      } else if(number % 2 == 0) {
+        return "deluxe";
+      }
+    }
+    return null;
+  }
+
     public String fizzBuzz(Integer number) {
 
        if((number % 3 == 0 || checkHasThree(number) == true )
            &&  (number % 5 == 0 || checkHasFive(number) == true) && checkDeluxe(number) == true) {
-           return "fizz buzz deluxe";
+           return "fizz buzz " + deluxeType(number);
        } else if((number % 3 == 0 || checkHasThree(number) == true )
              &&  (number % 5 == 0 || checkHasFive(number) == true) ) {
            return "fizz buzz";
        } else if ((number % 3 == 0 || checkHasThree(number) == true ) && checkDeluxe(number) == true) {
-           return "fizz deluxe";
+           return "fizz " + deluxeType(number);
        } else if((number % 5 == 0 || checkHasFive(number) == true) && checkDeluxe(number) == true) {
-           return "buzz deluxe";
+           return "buzz " + deluxeType(number);
        }else if(checkDeluxe(number) == true && number % 2 != 0) {
-         return "fake deluxe";
+         return "fake " + deluxeType(number);
        } else if (checkDeluxe(number) == true && number % 2 == 0) {
-         return "deluxe";
+         return deluxeType(number);
        } else if(number % 3 == 0 || checkHasThree(number) == true ) {
          return "fizz";
        } else if(number % 5 == 0 || checkHasFive(number) == true) {
@@ -71,4 +82,5 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
