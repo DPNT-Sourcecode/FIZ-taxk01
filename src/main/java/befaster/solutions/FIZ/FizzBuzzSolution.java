@@ -56,7 +56,9 @@ public class FizzBuzzSolution {
            return "fizz deluxe";
        } else if((number % 5 == 0 || checkHasFive(number) == true) && checkDeluxe(number) == true) {
            return "buzz deluxe";
-       }else if(checkDeluxe(number) == true) {
+       }else if(checkDeluxe(number) == true && number % 2 != 0) {
+         return "fake deluxe";
+       } else if (checkDeluxe(number) == true && number % 2 == 0) {
          return "deluxe";
        } else if(number % 3 == 0 || checkHasThree(number) == true ) {
          return "fizz";
@@ -69,3 +71,4 @@ public class FizzBuzzSolution {
     }
 
 }
+
