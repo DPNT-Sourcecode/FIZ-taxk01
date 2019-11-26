@@ -28,20 +28,11 @@ public class FizzBuzzSolution {
     return check;
   }
   public boolean checkDeluxe(Integer number) {
-    if (number <= 10) {
-      return false;
+    if((number % 3 == 0 && checkHasThree(number) == true) ||
+        (number % 5 == 0 && checkHasFive(number) == true)) {
+      return true;
     }
-    Integer copy = number;
-    int lastDigit = copy % 10;
-    copy = copy/10;
-    while(copy > 0) {
-      int c = copy % 10;
-      if(c != lastDigit) {
-        return false;
-      }
-      copy = copy/10;
-    }
-    return true;
+    return false;
   }
 
   public String deluxeType(Integer number) {
@@ -80,6 +71,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
